@@ -93,6 +93,9 @@ Of the 50 identified low-driver-education-access tracts, 3 are of moderate crash
 
 ## Takeaways
 
+This study is a starting point of a comprehensive research of teens' access to driver education and traffic safety in Ohio State. The spatial analysis shows that there are there disparities for Ohio teens to access driving training in Ohio at community level. Many Census tracts have extremely high poverty rate in addition to long distance from teen driving schools. That is, teens living in these neighborhoods are more likely to face physical and financial challenges of taking driver education and securing an early license. Of these low-access tracts, many are also coloacted with moderate-density crashes, exposing teens living in these neighborhoods with more risks of being involved in crashes. 
+
+In the future research, employing travel distance and even travel time as the proxy of spatial impedence is more accurate for representing human behaviors. In addition, it's worthy of investigating the relationship between living in low-driver-education-access neighborhood and teen drivers' crash outcome. This will further the understanding of whether the access to driver education is a factor influencing teens' traffic safety. Also, incorporating crash risk characteristics at community level into this relationship can unpack the impacts of traffic crash environment on teen drivers' bahaviors. 
 
 
 
