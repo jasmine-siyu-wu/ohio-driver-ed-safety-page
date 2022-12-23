@@ -6,9 +6,9 @@ tags: [dataviz, folium, drivered, geocode, osm]
 excerpt: ""
 folium-loader:
   folium-chart-1: ["charts/TeenDrivingSchools.html", "400"] # second argument is the height
-  folium-chart-2: ["TravelDist_10miles_Dissolved.html", "400"] # second argument is the height
-  folium-chart-3: ["EuclideanDist_10miles.html", "400"] # second argument is the height
-  folium-chart-4: ["TravelDist_10miles_Dissolved.html", "400"] # second argument is the height
+  folium-chart-2: ["charts/TravelDist_10miles_Dissolved.html", "400"] # second argument is the height
+  folium-chart-3: ["charts/EuclideanDist_10miles.html", "400"] # second argument is the height
+  folium-chart-4: ["charts/TravelDist_10miles_Dissolved.html", "400"] # second argument is the height
 toc: true
 toc_sticky: true
 read_time: true
