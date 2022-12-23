@@ -10,19 +10,18 @@ folium-loader:
   folium-chart-1: ["charts/CrashesHeatMap.html", "400"] # second argument is the height
   folium-chart-2: ["charts/CrashesHeatMap_YoungDrivers.html", "400"] # second argument is the height
   folium-chart-3: ["charts/LowAccessTracts_CrashHeatMap.html", "400"] # second argument is the height
+read_time: true
 toc: true
 toc_sticky: true
 ---
 
-This post will show examples of embedding interactive maps produced using [Folium](https://github.com/python-visualization/folium).
+Insert altair chart of teen driver crashes bar charts
 
-## OSMnx and Street Networks
 
-The shortest route between the Art Museum and the Liberty Bell:
 
 <div id="folium-chart-1"></div>
 
-## Percentage of Households without Internet
+
 
 <div id="folium-chart-2"></div>
 
