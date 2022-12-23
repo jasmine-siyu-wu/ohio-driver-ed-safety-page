@@ -9,7 +9,7 @@ altair-loader:
 folium-loader:
   folium-chart-1: ["charts/CrashesHeatMap.html", "400"] # second argument is the height
   folium-chart-2: ["charts/CrashesHeatMap_YoungDrivers.html", "400"] # second argument is the height
-  folium-chart-3: ["charts/LowAccessTracts_CrashMap.html", "400"] # second argument is the height
+  folium-chart-3: ["charts/LowAccessTracts_CrashHeatMap.html", "400"] # second argument is the height
   folium-chart-4: ["charts/LowAccessTracts_HighRiskTracts.html", "400"] # second argument is the height
 read_time: true
 toc: true
@@ -87,7 +87,8 @@ Comparing low-driver-education-access  zones versus crash risk zones, we can mor
 
 Of the 50 identified low-driver-education-access tracts, 3 are of moderate crash risk, 13 are of low crash risk, and 34 are of no crash risk. That is, the tracts of low access to driver education and of moderate crash risk need to be prioritized when agencies plan for teen traffic safety interventions. Their driving behaviors may be influenced by the crash environment, or they may be directly endangered by the environment.
 
-![low-access-y-risk]({{ site.url }}{{ site.baseurl }}/charts/LowAccess-byRisk.png)
+
+![low-access-by-risk]({{ site.url }}{{ site.baseurl }}/charts/LowAccess_byRisk.png)
 
 
 ## Takeaways
