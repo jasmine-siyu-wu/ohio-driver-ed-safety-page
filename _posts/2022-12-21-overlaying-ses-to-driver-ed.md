@@ -6,7 +6,7 @@ tags: [dataviz, folium, acs, ses, drivered]
 excerpt: " "
 folium-loader:
   folium-chart-1: ["charts/Euc10Mile_PovRate20_Map.html", "400"] # second argument is the height
-  folium-chart-1: ["charts/LowAccessTracts_Map.html", "400"] # second argument is the height
+  folium-chart-2: ["charts/LowAccessTracts_Map.html", "400"] # second argument is the height
 read_time: true
 toc: false
 toc_sticky: false
