@@ -56,7 +56,7 @@ plugins:
 
 author:
   name: "Jasmine Siyu Wu"
-  image:: ![profile]({{ site.url }}{{ site.baseurl }}/assets/images/Profile2022_v2.png)
+  image: ![profile](assets/images/Profile2022_v2.png)
   bio: "Master of City Planning Student, University of Pennsylvania"
   links:
     - label: "Website"
