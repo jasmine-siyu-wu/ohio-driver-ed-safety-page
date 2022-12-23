@@ -1,6 +1,6 @@
 ---
 title: "Access to Driver Education in Relation to Safety"
-date: 2022-12-22
+date: 2022-12-20
 published: true
 tags: [dataviz, folium, crash, heatmap, drivered]
 excerpt: " "
