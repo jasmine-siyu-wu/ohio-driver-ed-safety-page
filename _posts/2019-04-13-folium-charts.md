@@ -1,12 +1,15 @@
 ---
-title: "Example: Embedding Folium charts"
-date: 2019-04-13
+title: "Access to Driver Education in Relation to Safety"
+date: 2022-12-22
 published: true
-tags: [dataviz, folium]
-excerpt: "Embedding interactive Folium charts on static pages using Jekyll."
+tags: [dataviz, folium, crash, heatmap, drivered]
+excerpt: " "
+altair-loader:
+  altair-chart-1: "charts/measlesAltair.json"
 folium-loader:
-  folium-chart-1: ["charts/foliumChart.html", "400"] # second argument is the height
-  folium-chart-2: ["charts/percent_no_internet.html", "400"] # second argument is the height
+  folium-chart-1: ["charts/CrashesHeatMap.html", "400"] # second argument is the height
+  folium-chart-2: ["charts/CrashesHeatMap_YoungDrivers.html", "400"] # second argument is the height
+  folium-chart-3: ["charts/LowAccessTracts_CrashHeatMap.html", "400"] # second argument is the height
 toc: true
 toc_sticky: true
 ---
@@ -23,4 +26,9 @@ The shortest route between the Art Museum and the Liberty Bell:
 
 <div id="folium-chart-2"></div>
 
-See the [lecture 9B slides](https://musa-550-fall-2022.github.io/slides/lecture-9B.html) and the [lecture 10A slides](https://musa-550-fall-2022.github.io/slides/lecture-10A.html) for the code that produced these plots.
+
+
+<div id="folium-chart-3"></div>
+
+
+
