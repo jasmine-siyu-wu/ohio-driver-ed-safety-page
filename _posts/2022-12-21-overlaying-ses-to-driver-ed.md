@@ -5,7 +5,7 @@ published: true
 tags: [dataviz, folium, acs, ses, drivered]
 excerpt: " "
 folium-loader:
-  folium-chart-1: ["charts/Euc10Mile_PovRate25_Map.html", "400"] # second argument is the height
+  folium-chart-1: ["charts/Euc10Mile_PovRate20_Map.html", "400"] # second argument is the height
   folium-chart-1: ["charts/LowAccessTracts_Map.html", "400"] # second argument is the height
 read_time: true
 toc: false
@@ -71,20 +71,50 @@ census_data.rename(columns = {'B19013_001E':'med_income', 'B08201_001E':'tot_hh'
 
 ![percent-household-no-vehicles-map]({{ site.url }}{{ site.baseurl }}/charts/PctNoVehMap_basic.png)
 
-Based on the maps, there seem to be spatial correlation of these socioeconomic variables. In the next section, I will test their interdependencies and choose one variable to represent teens' socioeconomic access to/affordability of driver education.
+
 
 <br/>
 
 ## Inderdependency of Socioeconomic Variables
 
+Based on the maps above, there seem to be spatial correlation of these socioeconomic variables. Therefore, before identifying low-access tracts, I test their interdependencies and choose the most representative variable to represent teens' socioeconomic access to/affordability of driver education. 
 
 
+```python
+# Compute the correlation matrix
+corr = census_data[["poverty_rate100", "med_income", "pct_no_veh100"]].corr()
+labels = ['Poverty Rate', 'Median Household Income', 'Pct Household without Vehicles']
+corr.index = labels
+corr.columns = labels
 
-## Identifying Low-Access and High-Poverty Tracts
+# Generate a custom diverging colormap
+cmap = sns.diverging_palette(230, 20, as_cmap=True)
 
+#plotting the heatmap for correlation
+ax = sns.heatmap(corr, cmap=cmap, annot=True, 
+                 square=True, linewidths=.5, cbar_kws={"shrink": .5})
+```
+
+![ses-heatmap]({{ site.url }}{{ site.baseurl }}/charts/SES_Heatmap.png)
+
+
+All three varibles are moderately to highly correlated with each other. Amongst them, poverty rate is highly correlated with both other two variables: median household income and percent household without vehicles. It can been seen as representative the other two variables. That is, I will use poverty rate to measure socioeconomic inacessibility to teen driver education.
+
+The 75th percentile of poverty rate over all Ohio Census tracts is 21.4%, meaning that about a quarter of tracts have a poverty rate over 20%. Living in such a tract may indicate a centain level of financial disadvantages.
+
+## Identifying Long-Distance and High-Poverty Tracts
+
+So far, I have got my two measures of low access to driver education at Census tract level: living 10 miles away from a teen driving school and living in a high-poverty neighborhood (poverty rate > 20%). The map below displays the areas qualifying these two criteria.
 
 <div id="folium-chart-1"></div>
 
+By spatially joining the two layers, we can identifying Census tracts qualifying both criteria, which are then classified as low-driver-education-access neighborhoods.
 
+```python
+low_access_tract = gpd.sjoin(tract_pov20, buffer_euc_clip, predicate='intersects', how='left') 
+low_access_tract = low_access_tract.drop(columns = 'index_right', axis=1)
+low_access_tract['Euc_10Mi'] = low_access_tract['Euc_10Mi'].fillna("N")
+low_access_tract = low_access_tract[low_access_tract["Euc_10Mi"] == "Y"]
+```
 
 <div id="folium-chart-2"></div>
