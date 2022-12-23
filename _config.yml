@@ -58,8 +58,8 @@ plugins:
 
 
 author:
-  picture: "https://awards.design.upenn.edu/sites/default/files/styles/square_615/public/2022-11/Profile2022_v2.jpg?itok=FM4sf4mH"
   name: "Jasmine Siyu Wu"
+  avatar: "/assets/images/Profile2022_v2.jpg"
   bio: "Master of City Planning Student, University of Pennsylvania"
   links:
     - label: "Website"
