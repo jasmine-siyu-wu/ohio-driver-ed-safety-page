@@ -9,7 +9,8 @@ altair-loader:
 folium-loader:
   folium-chart-1: ["charts/CrashesHeatMap.html", "400"] # second argument is the height
   folium-chart-2: ["charts/CrashesHeatMap_YoungDrivers.html", "400"] # second argument is the height
-  folium-chart-3: ["charts/LowAccessTracts_CrashHeatMap.html", "400"] # second argument is the height
+  folium-chart-3: ["charts/LowAccessTracts_CrashMap.html", "400"] # second argument is the height
+  folium-chart-4: ["charts/LowAccessTracts_HighRiskTracts.html", "400"] # second argument is the height
 read_time: true
 toc: true
 toc_sticky: true
@@ -67,7 +68,7 @@ scaled_crash_data = scaler.fit_transform(crash_tract[['Fatal Injuries', 'Severe 
 To better visualize and understand clusters, I categorize 10 clusters into 3 groups base on the average tract-level crashes in each cluster: low risk, moderate risk, and high risk. The final map highlights different levels of traffic crash considering densities of teen driver crashes.
 
 
-![kmeans-map]({{ site.url }}{{ site.baseurl }}/charts/Kmeans_3level_Map.png)
+![kmeans-3level-map]({{ site.url }}{{ site.baseurl }}/charts/Kmeans_3level_Map.png)
 
 
 
@@ -76,7 +77,20 @@ To better visualize and understand clusters, I categorize 10 clusters into 3 gro
 
 ## Driver Education Access Zones vs. Crash Risk Zones
 
+Overlaying low-driver-education-access tracts over crash heatmap, we can see that low access zones appear to be located at the edges of hotspots.
+
 <div id="folium-chart-3"></div>
+
+Comparing low-driver-education-access  zones versus crash risk zones, we can more clearly see spatial relationships between the two communities. There is a diverity of crash risk zones of the identified low-driver-education-access zones. Yet, most of the low-access zones don't fall into the high-crash-risk category.
+
+<div id="folium-chart-4"></div>
+
+Of the 50 identified low-driver-education-access tracts, 3 are of moderate crash risk, 13 are of low crash risk, and 34 are of no crash risk. That is, the tracts of low access to driver education and of moderate crash risk need to be prioritized when agencies plan for teen traffic safety interventions. Their driving behaviors may be influenced by the crash environment, or they may be directly endangered by the environment.
+
+![low-access-y-risk]({{ site.url }}{{ site.baseurl }}/charts/LowAccess-byRisk.png)
+
+
+## Takeaways
 
 
 
