@@ -19,7 +19,6 @@ read_time: true
 
 From addresses to points, I used Google Maps API to geocode teen driving schools. [Code reference](https://www.natasshaselvaraj.com/a-step-by-step-guide-on-geocoding-in-python/)
 
-<br/>
 
 ```python
 # geocode the entire dataframe
